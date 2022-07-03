@@ -11,8 +11,16 @@ import {
   import logo from "../../../assets/logo.png";
   import Input from "../../components/Input";
   import spacings from "../../theme/spacings";
+  import { useNavigation } from "@react-navigation/native";
   
   const Login = () => {
+
+    const navigation = useNavigation();
+
+    function openScreen() {
+      navigation.navigate('Recuperar Senha')
+    }
+
     return (
       <Container>
         <Logo source={logo} />
